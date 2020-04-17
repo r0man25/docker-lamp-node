@@ -31,7 +31,8 @@ RUN pecl install redis-5.0.2 && \
 
 # Install node
 RUN curl -sL https://deb.nodesource.com/setup_12.x | bash - && \
-    apt-get install -y nodejs
+    apt-get install -y nodejs && \
+    npm install -g laravel-echo-server
 
 # Other PHP7 Extensions
 
