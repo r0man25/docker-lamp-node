@@ -63,5 +63,7 @@ services:
     container_name: 'mongo'
     image: mongo:latest
     restart: 'always'
+    volumes:
+      - ${MONGO_DATA_DIR-./data/mongo}:/data/db
     ports:
       - "${HOST_MACHINE_MONGO_PORT}:27017"
